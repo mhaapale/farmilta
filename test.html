@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.4.1/build/cssgrids/grids-min.css">
+	</head>
+	<body>
+	
+
+	<script src="http://yui.yahooapis.com/3.4.1/build/yui/yui-min.js"></script>
+	<script>
+		YUI().use('node', function (Y) {
+			// Access DOM nodes.
+			var oneElementById     = Y.one('#foo'),
+				oneElementByName   = Y.one('body'),
+				allElementsByClass = Y.all('.bar');
+
+			// Create DOM nodes.
+			var contentNode = Y.Node.create('<div>'),
+				listNode    = Y.Node.create('<ul>'),
+				footerNode  = Y.Node.create('<footer>');
+
+			contentNode.setContent('<p>Node makes it easy to add content.</p>');
+			listNode.insert('<li>Buy milk</li>');
+			footerNode.prepend('<h2>Footer Content</h2>');
+
+			// Manipulate DOM nodes.
+			Y.all('.important').addClass('highlight');
+
+			Y.one('#close-button').on('click', function () {
+				contentNode.hide();
+			});
+		});
+	</script>	
+	</body>
+</html>
